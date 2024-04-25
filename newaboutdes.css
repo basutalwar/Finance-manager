@@ -1,0 +1,166 @@
+@keyframes glow {
+    from {
+      text-shadow: 0 0 20px #2d9da9;
+    }
+    to {
+      text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    }
+  }
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #240090;
+}
+.dev{
+	background-color:#240090 ;
+	height: 200px;
+}
+.dev h1{
+	padding: 50px 40px;
+	color: whitesmoke;
+	animation: glow 2s ease-in-out infinite alternate;
+	font-weight: 900;
+	font-family: 'Pixelify Sans', sans-serif;
+	font-size: 5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#cards_container {
+	background-color: #190061;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 70px;
+	position: relative;
+	z-index: 10;
+}
+.nex{
+	width: 50px;
+	position: relative;
+	float: right;
+	top: -55px;
+}
+.card {
+	margin: 5px;
+	height: 80%;
+	width: 24%;
+	background-color: #21b8ef;
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	transition: all ease 0.6s;
+	cursor: pointer;
+}
+
+#card1{
+    background-image: url(sahil.jpg);
+}
+#card2{
+    background-image: url(basu.jpg);
+}
+#card3{
+    background-image: url(lasssi.jpg);
+}
+#card4{
+    background-image: url(bajaj.jpg);
+}
+.overlay {
+	height: 100%;
+	width: 97%;
+	background-color: #21b8ef;
+	padding: 21px;
+	padding-top: 50px;
+	opacity: 0;
+	transition: all ease 0.6s;
+	white-space: normal;
+}
+.cardlink{
+	text-decoration: none;
+}
+.overlay h4{
+    color: black;
+    /* font-size:40px ; */
+    font-size:2vw ;
+    text-transform: uppercase;
+    font-weight:800 ;
+    margin-bottom: 20px;
+	white-space: nowrap;
+
+}
+.overlay p{
+    color: black;
+	margin-top: 50px;
+    font-size:1.25vw ;
+	white-space: normal;
+	padding-right:30px;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(1,1,0,10deg);
+}
+/* #### MEDIA SCREEN KA CSS #### */
+@media screen and (max-width: 480px){
+	.dev{
+		background-color:#240090 ;
+		height: 120px;
+	}
+	.dev h1{
+		padding: 40px 20px;
+		color: whitesmoke;
+		animation: glow 2s ease-in-out infinite alternate;
+		font-weight: 900;
+		font-family: 'Pixelify Sans', sans-serif;
+		font-size: 2.5rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	#cards_container {
+		display: flex;
+		flex-direction: column;
+		padding: 30px 0px;
+		background-color: #190061;
+		/* width: 500px; */
+		height: 120vh;
+		align-items: center;
+		justify-content: center;
+		/* gap: 40px; */
+		position: relative;
+		z-index: 10;
+	}
+	.card {
+		
+		height: 80%;
+		width: 70%;
+		background-color: #21b8ef;
+		border-radius: 10px;
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+		transition: all ease 0.6s;
+	}
+	.nex{
+		width: 50px;
+		position: relative;
+		float: right;
+		top: -55px;
+	}
+	/* .overlay {
+		height: 10%;
+		width: 97%;
+		background-color: #21b8ef;
+		padding: 21px;
+		padding-top: 50px;
+		opacity: 0.5;
+		transition: all ease 0.6s;
+		white-space: normal;
+	} */
+
+}
